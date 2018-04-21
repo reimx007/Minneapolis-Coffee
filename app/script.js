@@ -1,6 +1,6 @@
 // Initialize the map on the "map" div with a given center and zoom
 var map = L.map('map', {
-    center: [44.969218, -93.262510],
+    center: [44.969219, -93.262510],
     zoom: 12
 });
 
