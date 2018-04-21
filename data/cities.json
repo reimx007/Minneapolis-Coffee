@@ -1,0 +1,271 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Anchorage",
+        "Region": "Alaska",
+        "Days": 2.5,
+        "Nights": 2,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.8875,
+          61.2152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Talkeetna",
+        "Region": "Alaska",
+        "Days": 2,
+        "Nights": 3,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -150.1094,
+          62.3238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Denali",
+        "Region": "Alaska",
+        "Days": 1,
+        "Nights": 0,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -148.897,
+          63.7437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Girdwood",
+        "Region": "Alaska",
+        "Days": 0.5,
+        "Nights": 3,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.1685,
+          60.9411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Seward",
+        "Region": "Alaska",
+        "Days": 2,
+        "Nights": 0,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.4429,
+          60.1051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Homer",
+        "Region": "Alaska",
+        "Days": 2.5,
+        "Nights": 2,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -151.5378,
+          59.6434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Halibut Cove",
+        "Region": "Alaska",
+        "Days": 0.5,
+        "Nights": 0,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -151.2259,
+          59.5976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Rome",
+        "Region": "Italy",
+        "Days": 4,
+        "Nights": 5,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4963,
+          41.9027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Vatican City",
+        "Region": "Italy",
+        "Days": 1,
+        "Nights": 0,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4533,
+          41.9029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Florence",
+        "Region": "Italy",
+        "Days": 1,
+        "Nights": 1,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2558,
+          43.7695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Venice",
+        "Region": "Italy",
+        "Days": 3,
+        "Nights": 3,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.3155,
+          45.4408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Pompeii",
+        "Region": "Italy",
+        "Days": 1,
+        "Nights": 1,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4989,
+          40.7461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Sorrento",
+        "Region": "Italy",
+        "Days": 1,
+        "Nights": 2,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3757,
+          40.6262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Capri",
+        "Region": "Italy",
+        "Days": 1,
+        "Nights": 0,
+        "marker-symbol": "star",
+        "marker-size": "large",
+        "marker-color": "#d85054"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2439,
+          40.5507
+        ]
+      }
+    }
+  ]
+}
