@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <meta charset="utf-8"> <!--general metadata-->
- <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--touch screen compatible-->
- <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"> <!--scaling page to fit device screen-->
- <meta name="mobile-web-app-capable" content="yes"> <!--moble device compatible-->
- <meta name="apple-mobile-web-app-capable" content="yes"> <!--apple device compatible-->
- <meta name="description" content="Bicycle Coffee Tour of Minneapolis"> <!--description-->
- <meta name="author" content="Carl Reim"> <!--author-->
+	<title>World Travels</title>
 
- <title>Bicycle Coffee Tour of Minneapolis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
- <link rel="stylesheet" href="leaflet/leaflet.css" /> <!--general leaflet css-->
- <link rel="stylesheet" href="app/style.css" /> <!--specific to this application-->
- <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' /> <!--included for testing-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//api.mapbox.com/mapbox.js/v2.4.0/mapbox.css">
+	<link rel="stylesheet" href="assets/leaflet-zoomhome/leaflet-zoomhome.css">
+	<link rel="stylesheet" href="assets/leaflet-sidebar/leaflet-sidebar.css">
+	<link rel="stylesheet" href="assets/style.css">
 
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
 </head>
 <body>
 
-<div id="map"></div> <!--create map-->
+<!--Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56442911-2', 'auto');
+  ga('send', 'pageview');
+</script>
 
-<script src="leaflet/leaflet.js"></script> <!--import leaflet library-->
-<script src="esri-leaflet/esri-leaflet.js"></script> <!--import esri's leaflet library-->
-<script src="app/script.js"></script> <!--JS specific to this application-->
-<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script> <!--included for testing-->
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar collapsed">
+		<div class="sidebar-tabs"><!-- Sidebar nav -->
+				<ul role="tablist"><!-- Top nav -->
+						<li><a href="#home" role="tab" alt="Home sidebar tab"><i class="fa fa-bars" aria-hidden="true"></i><span class="screen-reader-text">Home tab</span></a></li>
+						<li><a href="#alaska" role="tab" alt="Alaska sidebar tab"><i class="fa fa-anchor" aria-hidden="true"></i><span class="screen-reader-text">Alaska tab</span></a></li>
+						<li><a href="#italia" role="tab" alt="Italia sidebar tab"><i class="fa fa-university" aria-hidden="true"></i><span class="screen-reader-text">Italia tab</span></a></li>
+				</ul><!-- /Top nav -->
+		</div><!-- /Sidebar nav -->
 
+		<!-- Sidebar Tab panes -->
+		<div class="sidebar-content">
+
+				<!-- About -->
+				<div class="sidebar-pane" id="home">
+						<h1 class="sidebar-header">World Travels<span class="sidebar-close"><i class="fa fa-caret-left" aria-hidden="true"></i></span></h1>
+
+						<p>What do cartographers do when they travel the globe? They take photos, detailed notes, and sometimes get the exact coordinates of where they went and put it all together!</p>
+						<p>This interactive map showcases travels my husband and I have experienced around the globe together! &hearts;</p>
+
+						<img id="sidebar-img" src="photos/this-is-us.JPG" alt="My husband and I riding a gondola in Venezia, Italia"></img>
+
+						<button class="button" id="openAlaskaTabBtn"><i class="fa fa-info-circle" aria-hidden="true"></i> Learn more: Alaska <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+						<button class="button" id="openItaliaTabBtn"><i class="fa fa-info-circle" aria-hidden="true"></i> Learn more: Italia <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+			  </div><!-- /About -->
+
+				<!-- Alaska -->
+				<div class="sidebar-pane" id="alaska">
+						<h1 class="sidebar-header">Alaska<span class="sidebar-close"><i class="fa fa-caret-left" aria-hidden="true"></i></span></h1>
+						<h2>"The Last Frontier"</h2>
+
+							<p><strong>Cities</strong>:
+							<ul>
+								<li>Anchorage</li>
+								<li>Talkeetna</li>
+								<li>Denali</li>
+								<li>Girdwood</li>
+								<li>Seward</li>
+								<li>Homer</li>
+								<li>Halibut Cove</li>
+							</ul>
+							</p>
+
+						<p>Visited in May 2015. 11 days. 10 nights.</p>
+
+						<img id="sidebar-img" src="photos/alaska/fjords.JPG" alt="Alaska fjords from outside Seward"></img>
+
+						<button class="button" id="travelAlaskaBtn"><i class="fa fa-anchor fa-lg" aria-hidden="true"></i> Travel through Alaska</button>
+						<button class="button" id="openItaliaTabBtn2"><i class="fa fa-info-circle" aria-hidden="true"></i> Learn more: Italia <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+				</div><!-- /Alaska -->
+
+				<!-- Italia -->
+				<div class="sidebar-pane" id="italia">
+						<h1 class="sidebar-header">Italia<span class="sidebar-close"><i class="fa fa-caret-left" aria-hidden="true"></i></span></h1>
+						<h2>"When in Rome..."</h2>
+
+							<p><strong>Cities:</strong>
+							<ul>
+								<li>Roma</li>
+								<li>Firenze</li>
+								<li>Venezia</li>
+								<li>Pompei</li>
+								<li>Sorrento</li>
+								<li>Capri</li>
+							</ul>
+							</p>
+
+						<p>Visited in April 2016. 12 days. 12 nights.</p>
+
+						<img id="sidebar-img" src="photos/italy/garden-of-augustus.JPG" alt="Italia from the island of Capri's Garden of Augustus"></img>
+
+						<button class="button" id="travelItaliaBtn"><i class="fa fa-university fa-lg"></i> Travel through Italia</button>
+						<button class="button" id="openAlaskaTabBtn2"><i class="fa fa-info-circle"></i> Learn more: Alaska <i class="fa fa-arrow-circle-right"></i></button>
+				</div><!-- /Italia -->
+
+		</div><!-- /Sidebar Tab panes -->
+</div><!-- /Sidebar -->
+
+<div id="map" class="sidebar-map"></div>
+
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="//api.mapbox.com/mapbox.js/v2.4.0/mapbox.js"></script>
+	<script src="assets/leaflet.label.js"></script>
+	<script src="assets/leaflet-zoomhome/leaflet-zoomhome.js"></script>
+	<script src="assets/leaflet-hash.js"></script>
+	<script src="assets/leaflet-sidebar/leaflet-sidebar.js"></script>
+	<script src="assets/script.js"></script>
 
 </body>
 </html>
