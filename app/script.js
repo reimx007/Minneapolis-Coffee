@@ -25,9 +25,9 @@ var mnCountiesJSON = new L.GeoJSON.AJAX("data/mnCounties.geojson", {
             weight: 2
           };
   },
-  onEachFeature: function (feature, layer) {               //create popup for each layer
+  /*onEachFeature: function (feature, layer) {               //create popup for each layer
     layer.bindPopup(feature.properties.NAME);
-  }
+  }*/
 }).addTo(map);
 
 var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
@@ -36,14 +36,10 @@ var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
       	radius: 5,
       	fillOpacity: 0.85,
       	color: "#155fd6",
+        clickable: true
       });
   },
-  onEachFeature: function (feature, layer) {
-    //Popup
-    layer.bindLabel(
-        feature.properties.Name, {
-          noHide: true,
-          clickable: true
-    });
+  onEachFeature: function (feature, layer) {               //create popup for each layer
+    layer.bindPopup(feature.properties.Name);
   }
 }).addTo(map);
