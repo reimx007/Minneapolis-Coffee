@@ -26,3 +26,14 @@ var mnCountiesJSON = new L.GeoJSON.AJAX("data/mnCounties.geojson", {
           };
   }
 }).addTo(map);
+
+var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
+  pointToLayer: function (feature, latlng) {
+	  return new L.CircleMarker(latlng, {
+      	radius: 5,
+      	fillOpacity: 0.85,
+      	color: "#000",
+      	clickable: false
+      });
+  },
+}).addTo(map);
