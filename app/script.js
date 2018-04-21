@@ -24,6 +24,9 @@ var mnCountiesJSON = new L.GeoJSON.AJAX("data/mnCounties.geojson", {
             color: "#fff",
             weight: 2
           };
+  },
+  onEachFeature: function (feature, layer) {               //create popup for each layer
+    layer.bindPopup(feature.properties.NAME);
   }
 }).addTo(map);
 
