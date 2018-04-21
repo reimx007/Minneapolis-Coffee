@@ -38,7 +38,12 @@ var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
       	color: "#155fd6",
       });
   },
-  onEachFeature: function (feature, layer) {               //create popup for each layer
-    layer.bindPopup(feature.properties.Name);
+  onEachFeature: function (feature, layer) {
+    //Popup
+    layer.bindLabel(
+        feature.properties.Name, {
+          noHide: true,
+          clickable: true
+    });
   }
 }).addTo(map);
