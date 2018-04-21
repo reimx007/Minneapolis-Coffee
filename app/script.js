@@ -18,7 +18,27 @@ var EsriDarkGrayCanvasRef = L.tileLayer('https://server.arcgisonline.com/ArcGIS/
 	maxZoom: 16
 }).addTo(map);
 
-
+var coffeeshops = L.geoJson(null, {
+  pointToLayer: function (feature, latlng) {
+	  return new L.CircleMarker(latlng, {
+      	radius: 5,
+      	fillOpacity: 0.85,
+      	color: "#000",
+      	clickable: false
+      });
+  },
+  onEachFeature: function (feature, layer) {
+	  //Popup
+	  layer.bindLabel(
+			  feature.properties.City, {
+				  noHide: true,
+					clickable: true
+	  });
+  }
+});
+$.getJSON("data/coffeeshops.geojson", function (data) {
+  visitedCities.addData(data);
+});
 
 /* Used in testing of coffee shop symbols. Not actually used in current version */
 var markerOptions = {
