@@ -27,8 +27,8 @@ var EsriDarkGrayCanvasRef = L.tileLayer('https://server.arcgisonline.com/ArcGIS/
   },
   onEachFeature: function (feature, layer) {               //create popup for each layer
     layer.bindPopup(feature.properties.NAME);
-  }*/
-}).addTo(map);
+  }
+}).addTo(map); */
 
 var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
   pointToLayer: function (feature, latlng) {
