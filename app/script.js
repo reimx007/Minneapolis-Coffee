@@ -32,8 +32,14 @@ var coffeeshops = new L.GeoJSON.AJAX("data/coffeeshops.geojson", {
 	  return new L.CircleMarker(latlng, {
       	radius: 5,
       	fillOpacity: 0.85,
-      	color: "#000",
-      	clickable: false
+      	color: "#155fd6",
       });
   },
+  onEachFeature: function (feature, layer) {               //create popup for each layer
+    layer.bindPopup("<b>" + feature.properties.Name + "</b><br />" + feature.properties.Snippet + "<br />"+
+    '<a href="' + feature.properties.Insta_link+ '" target="_blank" >Visit Instagram Post</a>' +"<br />"+
+    "<img src='photos/" + feature.properties.imageLink + ".JPG'width='250' height='250'></img><br />"              //includes naem, address (Snippet),
+                                                                                                                   // Instagram link, and image
+    );
+  }
 }).addTo(map);
