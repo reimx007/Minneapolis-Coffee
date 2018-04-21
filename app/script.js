@@ -18,14 +18,14 @@ var EsriDarkGrayCanvasRef = L.tileLayer('https://server.arcgisonline.com/ArcGIS/
 	maxZoom: 16
 }).addTo(map);
 
-var mnCountiesJSON = new L.GeoJSON.AJAX("data/mnCounties.geojson", {
+/*var mnCountiesJSON = new L.GeoJSON.AJAX("data/mnCounties.geojson", {
   style: function() {
           return {
             color: "#fff",
             weight: 2
           };
   },
-  /*onEachFeature: function (feature, layer) {               //create popup for each layer
+  onEachFeature: function (feature, layer) {               //create popup for each layer
     layer.bindPopup(feature.properties.NAME);
   }*/
 }).addTo(map);
