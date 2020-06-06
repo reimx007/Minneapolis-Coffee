@@ -1,0 +1,10 @@
+/* General HTML body styling to ensure overflow hidden and 0 margin */
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+/* Seting map height to full window size, required for map */
+html, body, #map {
+    height: 100%;
+}
